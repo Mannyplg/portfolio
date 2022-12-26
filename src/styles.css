@@ -4,6 +4,7 @@ body {
 
 section {
   background-color: white;
+  padding: 80px;
 }
 
 .hero {
@@ -14,8 +15,10 @@ section {
 }
 
 footer {
-  height: 500px;
   background-color: black;
+  color: white;
+  text-align: center;
+  padding: 80px;
 }
 
 nav {
@@ -130,10 +133,22 @@ p {
   justify-content: space-around;
 }
 
+@media only screen and (max-width: 1000px) {
+  .project-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .project-image {
   margin-top: 25px;
   width: 250px;
   border-radius: 150px;
+}
+
+.project-link {
+  text-decoration: none;
+  color: #ef744b;
 }
 
 hr {
@@ -161,9 +176,27 @@ a {
     background-color: transparent;
     color: white;
     font-size: 30px;
+    margin: 20px;
+    align-self: flex-end;
   }
 
   ul {
+    display: none;
+    background-color: lightsalmon;
+    margin: 0px;
+  }
+
+  ul.show {
+    display: block;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: lightsalmon;
+  }
+
+  .logo {
     display: none;
   }
 }
